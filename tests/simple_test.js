@@ -18,8 +18,10 @@ const sp = new ServiceProvider();
 describe('gelf logger service', () => {
   it('got state response', () =>
     GelfLogger.registerWithManager(sp).then(() => {
-      const logger = sp.services.logger;
-      console.log(logger);
+      const logger = sp.createServiceFactoryInstanceFromConfig({
+        type: 'gelf-logger'
+      }, sp);
+      //console.log(logger);
       return logger.start().then(() => assert.equal(logger.state, 'running'));
     }));
 });

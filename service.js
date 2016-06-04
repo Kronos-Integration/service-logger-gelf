@@ -12,7 +12,7 @@ const endpoint = require('kronos-endpoint'),
 class GelfLogger extends service.Logger {
 
 	static get name() {
-		return 'logger';
+		return 'gelf-logger';
 	}
 
 	get type() {
@@ -21,16 +21,31 @@ class GelfLogger extends service.Logger {
 
 	get configurationAttributes() {
 		return Object.assign({
-			port: {
+			graylogPort: {
 				description: 'gelf server port',
 				type: 'integer',
 				default: 12201,
 				needsRestart: true
 			},
-			hostname: {
+			graylogHostname: {
 				description: 'gelf server name',
 				type: 'string',
 				default: '127.0.0.1',
+				needsRestart: true
+			},
+			connection: {
+				type: 'string',
+				default: 'wan',
+				needsRestart: true
+			},
+			maxChunkSizeWan: {
+				type: 'integer',
+				default: 1420,
+				needsRestart: true
+			},
+			maxChunkSizeLan: {
+				type: 'integer',
+				default: 8154,
 				needsRestart: true
 			}
 		}, super.configurationAttributes);
@@ -38,11 +53,14 @@ class GelfLogger extends service.Logger {
 
 	_start() {
 		const gelf = new Gelf({
-			graylogPort: this.port,
-			graylogHostname: this.hostname
+			graylogPort: this.graylogPort,
+			graylogHostname: this.graylogHostname,
+			connection: this.connection,
+			maxChunkSizeWan: this.maxChunkSizeWan,
+			maxChunkSizeLan: this.maxChunkSizeLan
 		});
 
-		this.endpoint.log.receive = entry => {
+		this.endpoints.log.receive = entry => {
 			try {
 				gelf.emit('gelf.log', entry);
 			} catch (e) {
@@ -56,9 +74,11 @@ class GelfLogger extends service.Logger {
 	}
 }
 
-module.exports.registerWithManager = manager =>
-	manager.registerServiceFactory(GelfLogger).then(sf =>
-		manager.declareService({
+module.exports.registerWithManager = manager => {
+	return manager.registerServiceFactory(GelfLogger).then(sf => {
+		return manager.declareService({
 			type: GelfLogger.name,
 			name: GelfLogger.name
-		}));
+		});
+	});
+}
