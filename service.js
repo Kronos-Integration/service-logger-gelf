@@ -74,11 +74,10 @@ class GelfLogger extends service.Logger {
 	}
 }
 
-module.exports.registerWithManager = manager => {
-	return manager.registerServiceFactory(GelfLogger).then(sf => {
+module.exports.registerWithManager = manager =>
+	manager.registerServiceFactory(GelfLogger).then(sf => {
 		return manager.declareService({
 			type: GelfLogger.name,
-			name: GelfLogger.name
+			name: 'logger'
 		});
 	});
-}
