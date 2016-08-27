@@ -4,6 +4,7 @@
 
 const endpoint = require('kronos-endpoint'),
 	service = require('kronos-service'),
+	mat = require('model-attributes'),
 	Gelf = require('gelf');
 
 /**
@@ -15,12 +16,8 @@ class GelfLogger extends service.Logger {
 		return 'gelf-logger';
 	}
 
-	get type() {
-		return GelfLogger.name;
-	}
-
-	get configurationAttributes() {
-		return Object.assign({
+	static get configurationAttributes() {
+		return Object.assign(mat.createAttributes({
 			graylogPort: {
 				description: 'gelf server port',
 				type: 'integer',
@@ -48,7 +45,7 @@ class GelfLogger extends service.Logger {
 				default: 8154,
 				needsRestart: true
 			}
-		}, super.configurationAttributes);
+		}), service.Service.configurationAttributes);
 	}
 
 	_start() {
