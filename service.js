@@ -20,13 +20,13 @@ class GelfLogger extends service.Logger {
 		return Object.assign(mat.createAttributes({
 			graylogPort: {
 				description: 'gelf server port',
-				type: 'integer',
+				type: 'ip-port',
 				default: 12201,
 				needsRestart: true
 			},
 			graylogHostname: {
 				description: 'gelf server name',
-				type: 'string',
+				type: 'hostname',
 				default: '127.0.0.1',
 				needsRestart: true
 			},
@@ -61,7 +61,7 @@ class GelfLogger extends service.Logger {
 			try {
 				gelf.emit('gelf.log', entry);
 			} catch (e) {
-				console.log(`Unable to log entry with the following keys: ${Object.keys(entry)} ${e}`);
+				console.error(`Unable to log entry with the following keys: ${Object.keys(entry)} ${e}`);
 				return Promise.reject(e);
 			}
 			return Promise.resolve();
