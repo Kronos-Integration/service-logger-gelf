@@ -36,12 +36,12 @@ class GelfLogger extends service.Logger {
 				needsRestart: true
 			},
 			maxChunkSizeWan: {
-				type: 'integer',
+				type: 'unsigned-integer',
 				default: 1420,
 				needsRestart: true
 			},
 			maxChunkSizeLan: {
-				type: 'integer',
+				type: 'unsigned-integer',
 				default: 8154,
 				needsRestart: true
 			}
