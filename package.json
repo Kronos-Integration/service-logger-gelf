@@ -20,7 +20,7 @@
   "dependencies": {
     "gelf": "^1.0.3",
     "kronos-service": "^4.0.0",
-    "model-attributes": "^1.5.0"
+    "model-attributes": "^1.7.1"
   },
   "devDependencies": {
     "chai": "3.5.0",
