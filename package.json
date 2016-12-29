@@ -20,7 +20,7 @@
   "dependencies": {
     "gelf": "^1.0.3",
     "kronos-service": "^4.1.6",
-    "model-attributes": "^2.2.6"
+    "model-attributes": "^2.2.17"
   },
   "devDependencies": {
     "chai": "3.5.0",
@@ -28,7 +28,7 @@
     "istanbul": "0.4.5",
     "jsdoc": "^3.4.3",
     "mocha": "3.2.0",
-    "semantic-release": "6.3.2"
+    "semantic-release": "^6.3.5"
   },
   "contributors": [
     {
