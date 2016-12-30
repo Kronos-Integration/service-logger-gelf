@@ -8,7 +8,7 @@ import {
 }
 from 'kronos-service';
 import {
-	createAttributes
+	createAttributes, mergeAttributes
 }
 from 'model-attributes';
 
@@ -24,7 +24,7 @@ class GelfLoggerService extends ServiceLogger {
 	}
 
 	static get configurationAttributes() {
-		return Object.assign(createAttributes({
+		return mergeAttributes(createAttributes({
 			graylogPort: {
 				description: 'gelf server port',
 				type: 'ip-port',
