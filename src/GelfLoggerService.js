@@ -2,22 +2,29 @@
 
 'use strict';
 
-const endpoint = require('kronos-endpoint'),
-	service = require('kronos-service'),
-	mat = require('model-attributes'),
-	Gelf = require('gelf');
+import {
+	Service,
+	ServiceLogger
+}
+from 'kronos-service';
+import {
+	createAttributes
+}
+from 'model-attributes';
+
+const Gelf = require('gelf');
 
 /**
  * Log receiving service
  */
-class GelfLogger extends service.Logger {
+class GelfLoggerService extends ServiceLogger {
 
 	static get name() {
 		return 'gelf-logger';
 	}
 
 	static get configurationAttributes() {
-		return Object.assign(mat.createAttributes({
+		return Object.assign(createAttributes({
 			graylogPort: {
 				description: 'gelf server port',
 				type: 'ip-port',
@@ -45,7 +52,7 @@ class GelfLogger extends service.Logger {
 				default: 8154,
 				needsRestart: true
 			}
-		}), service.Service.configurationAttributes);
+		}), Service.configurationAttributes);
 	}
 
 	_start() {
@@ -71,10 +78,16 @@ class GelfLogger extends service.Logger {
 	}
 }
 
-module.exports.registerWithManager = manager =>
-	manager.registerServiceFactory(GelfLogger).then(sf => {
+function registerWithManager(manager) {
+	return manager.registerServiceFactory(GelfLoggerService).then(sf => {
 		return manager.declareService({
-			type: GelfLogger.name,
+			type: GelfLoggerService.name,
 			name: 'logger'
 		});
 	});
+}
+
+export {
+	GelfLoggerService,
+	registerWithManager
+};
