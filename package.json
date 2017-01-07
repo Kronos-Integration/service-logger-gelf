@@ -8,7 +8,7 @@
     "cover": "npm run prepublish && istanbul cover node_modules/.bin/_mocha -- -u exports tests/*_test.js",
     "test": "mocha tests/*_test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-    "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js > README.md",
+    "docs": "jsdoc2md -l off -t doc/README.hbs -f src/*.js >README.md",
     "prepublish": "rollup --output=dist/module.js -c -- src/GelfLoggerService.js",
     "pretest": "npm run prepublish",
     "posttest": "markdown-doctest"
@@ -34,7 +34,7 @@
     "semantic-release": "^6.3.5",
     "jsdoc-to-markdown": "^2.0.1",
     "markdown-doctest": "^0.9.1",
-    "rollup": "^0.41.0"
+    "rollup": "^0.41.1"
   },
   "contributors": [
     {
@@ -48,7 +48,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=6.9.2"
+    "node": ">=6.9.3"
   },
   "keywords": [
     "kronos-service"
