@@ -49,7 +49,7 @@
   ],
   "license": "BSD-2-Clause",
   "engines": {
-    "node": ">=6.9.4"
+    "node": ">=7.7.2"
   },
   "keywords": [
     "kronos-service"
