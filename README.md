@@ -1,4 +1,5 @@
 [![npm](https://img.shields.io/npm/v/kronos-service-logger-gelf.svg)](https://www.npmjs.com/package/kronos-service-logger-gelf)
+[![Greenkeeper](https://badges.greenkeeper.io/Kronos-Integration/kronos-service-logger-gelf)](https://greenkeeper.io/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/Kronos-Integration/kronos-service-logger-gelf)
 [![Build Status](https://secure.travis-ci.org/Kronos-Integration/kronos-service-logger-gelf.png)](http://travis-ci.org/Kronos-Integration/kronos-service-logger-gelf)
 [![bithound](https://www.bithound.io/github/Kronos-Integration/kronos-service-logger-gelf/badges/score.svg)](https://www.bithound.io/github/Kronos-Integration/kronos-service-logger-gelf)
@@ -13,7 +14,6 @@
 [![docs](http://inch-ci.org/github/Kronos-Integration/kronos-service-logger-gelf.svg?branch=master)](http://inch-ci.org/github/Kronos-Integration/kronos-service-logger-gelf)
 [![downloads](http://img.shields.io/npm/dm/kronos-service-logger-gelf.svg?style=flat-square)](https://npmjs.org/package/kronos-service-logger-gelf)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-
 
 kronos-service-logger-gelf
 =====
