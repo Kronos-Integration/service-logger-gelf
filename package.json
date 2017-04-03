@@ -24,7 +24,7 @@
   "homepage": "https://github.com/Kronos-Integration/kronos-service-logger-gelf#readme",
   "dependencies": {
     "gelf": "^1.0.3",
-    "kronos-service": "^4.5.4",
+    "kronos-service": "^4.5.5",
     "model-attributes": "^3.0.8"
   },
   "devDependencies": {
