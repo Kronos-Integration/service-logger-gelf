@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "forwards log entries to a GELF server",
   "main": "dist/module.js",
-  "module": "src/GelfLoggerService.js",
+  "module": "src/gelf-logger-service.js",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "test": "ava",
