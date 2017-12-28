@@ -1,9 +1,23 @@
 {
   "name": "kronos-service-logger-gelf",
   "version": "0.0.0-semantic-release",
-  "description": "forwards log entries to a GELF server",
   "main": "dist/module.js",
   "module": "src/gelf-logger-service.js",
+  "description": "forwards log entries to a GELF server",
+  "keywords": [
+    "kronos-service"
+  ],
+  "contributors": [
+    {
+      "name": "Torsten Link",
+      "email": "torstenlink@gmx.de"
+    },
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "BSD-2-Clause",
   "scripts": {
     "cover": "nyc --temp-directory build/nyc ava",
     "test": "ava",
@@ -15,14 +29,6 @@
     "prepare": "rollup -c",
     "lint": "documentation lint src/gelf-logger-service.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kronos-Integration/kronos-service-logger-gelf.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-service-logger-gelf/issues"
-  },
-  "homepage": "https://github.com/Kronos-Integration/kronos-service-logger-gelf#readme",
   "dependencies": {
     "gelf": "^2.0.0",
     "kronos-service": "^4.8.2",
@@ -38,40 +44,17 @@
     "xo": "^0.19.0",
     "documentation": "^5.3.5"
   },
-  "contributors": [
-    {
-      "name": "Torsten Link",
-      "email": "torstenlink@gmx.de"
-    },
-    {
-      "name": "Markus Felten",
-      "email": "markus.felten@gmx.de"
-    }
-  ],
-  "license": "BSD-2-Clause",
   "engines": {
     "node": ">=8.9.3"
   },
-  "keywords": [
-    "kronos-service"
-  ],
-  "nyc": {
-    "include": [
-      "dist/**/*.js"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "report-dir": "./coverage"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kronos-Integration/kronos-service-logger-gelf.git"
   },
-  "template": {
-    "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
-    }
+  "bugs": {
+    "url": "https://github.com/Kronos-Integration/kronos-service-logger-gelf/issues"
   },
-  "xo": {
-    "space": true
-  },
+  "homepage": "https://github.com/Kronos-Integration/kronos-service-logger-gelf#readme",
   "ava": {
     "files": [
       "build/*-test.js"
@@ -82,5 +65,22 @@
     "require": [
       "babel-register"
     ]
+  },
+  "nyc": {
+    "include": [
+      "dist/**/*.js"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "report-dir": "./coverage"
+  },
+  "xo": {
+    "space": true
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   }
 }
