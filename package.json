@@ -73,7 +73,7 @@
     "reporter": [
       "lcov"
     ],
-    "report-dir": "./coverage"
+    "report-dir": "./build/coverage"
   },
   "xo": {
     "space": true
