@@ -73,11 +73,11 @@ export class GelfLoggerService extends ServiceLogger {
   }
 }
 
-export function registerWithManager(manager) {
-  return manager.registerServiceFactory(GelfLoggerService).then(sf =>
-    manager.declareService({
-      type: GelfLoggerService.name,
-      name: 'logger'
-    })
-  );
+export async function registerWithManager(manager) {
+  const sf = await manager.registerServiceFactory(GelfLoggerService);
+
+  manager.declareService({
+    type: GelfLoggerService.name,
+    name: 'logger'
+  });
 }
