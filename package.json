@@ -1,6 +1,9 @@
 {
   "name": "kronos-service-logger-gelf",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/module.js",
   "module": "src/gelf-logger-service.js",
   "description": "forwards log entries to a GELF server",
