@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "gelf": "^2.0.0",
-    "kronos-service": "^4.16.0",
+    "kronos-service": "^4.17.1",
     "model-attributes": "^3.0.10"
   },
   "devDependencies": {
