@@ -1,4 +1,4 @@
-import { Service, ServiceLogger } from 'kronos-service';
+import { Service, ServiceLogger } from '@kronos-integration/service';
 import { createAttributes, mergeAttributes } from 'model-attributes';
 
 const Gelf = require('gelf');
@@ -6,7 +6,7 @@ const Gelf = require('gelf');
 /**
  * Log receiving service
  */
-export class GelfLoggerService extends ServiceLogger {
+export default class GelfLoggerService extends ServiceLogger {
   /**
    * @return {string} 'gelf-logger'
    */
@@ -71,13 +71,4 @@ export class GelfLoggerService extends ServiceLogger {
       }
     };
   }
-}
-
-export async function registerWithManager(manager) {
-  const sf = await manager.registerServiceFactory(GelfLoggerService);
-
-  manager.declareService({
-    type: GelfLoggerService.name,
-    name: 'logger'
-  });
 }

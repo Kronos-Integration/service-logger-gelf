@@ -1,4 +1,0 @@
-Summary
-=======
-
--	[readme](README.md)
