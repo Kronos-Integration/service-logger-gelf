@@ -26,8 +26,7 @@
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/gelf-logger-service.mjs --section=API",
     "lint": "documentation lint src/gelf-logger-service.mjs",
-    "posttest": "npm run prepare && markdown-doctest",
-    "prepare": "rollup -c",
+    "posttest": "markdown-doctest",
     "test": "ava"
   },
   "dependencies": {

@@ -1,7 +1,7 @@
 import { Service, ServiceLogger } from '@kronos-integration/service';
 import { createAttributes, mergeAttributes } from 'model-attributes';
+import Gelf from 'gelf';
 
-const Gelf = require('gelf');
 
 /**
  * Log receiving service

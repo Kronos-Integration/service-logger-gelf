@@ -1,5 +1,5 @@
 import test from 'ava';
-import { StandaloneServiceProvider } from 'kronos-service';
+import { StandaloneServiceProvider } from '@kronos-integration/service';
 import GelfLoggerService from '../src/gelf-logger-service';
 
 
