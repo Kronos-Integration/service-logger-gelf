@@ -47,12 +47,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kronos-Integration/kronos-service-logger-gelf.git"
+    "url": "https://github.com/Kronos-Integration/service-logger-gelf.git"
   },
   "bugs": {
-    "url": "https://github.com/Kronos-Integration/kronos-service-logger-gelf/issues"
+    "url": "https://github.com/Kronos-Integration/service-logger-gelf/issues"
   },
-  "homepage": "https://github.com/Kronos-Integration/kronos-service-logger-gelf#readme",
+  "homepage": "https://github.com/Kronos-Integration/service-logger-gelf#readme",
   "ava": {
     "files": [
       "tests/*-test.mjs"
