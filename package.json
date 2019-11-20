@@ -30,7 +30,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^6.1.8",
+    "@kronos-integration/service": "^6.1.9",
     "gelf": "^2.0.0",
     "model-attributes": "^4.1.2"
   },
