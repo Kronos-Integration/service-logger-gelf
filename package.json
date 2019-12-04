@@ -1,10 +1,11 @@
 {
   "name": "@kronos-integration/service-logger-gelf",
   "version": "0.0.0-semantic-release",
-  "type": "module",
   "publishConfig": {
     "access": "public"
   },
+  "sideEffects": false,
+  "type": "module",
   "main": "src/gelf-logger-service.mjs",
   "module": "src/gelf-logger-service.mjs",
   "description": "forwards log entries to a GELF server",
@@ -70,6 +71,5 @@
     "repository": {
       "url": "https://github.com/arlac77/npm-package-template-esm-only.git"
     }
-  },
-  "sideEffects": false
+  }
 }
