@@ -1,7 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/Kronos-Integration/service-logger-gelf.png)](http://travis-ci.org/Kronos-Integration/service-logger-gelf)
 [![codecov.io](http://codecov.io/github/Kronos-Integration/service-logger-gelf/coverage.svg?branch=master)](http://codecov.io/github/Kronos-Integration/service-logger-gelf?branch=master)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![downloads](http://img.shields.io/npm/dm/service-logger-gelf.svg?style=flat-square)](https://npmjs.org/package/service-logger-gelf)
+[![downloads](http://img.shields.io/npm/dm/@kronos-integration/service-logger-gelf.svg?style=flat-square)](https://npmjs.org/package/@kronos-integration/service-logger-gelf)
 [![GitHub Issues](https://img.shields.io/github/issues/Kronos-Integration/service-logger-gelf.svg?style=flat-square)](https://github.com/Kronos-Integration/service-logger-gelf/issues)
 [![Greenkeeper](https://badges.greenkeeper.io/Kronos-Integration/service-logger-gelf.svg)](https://greenkeeper.io/)
 [![Known Vulnerabilities](https://snyk.io/test/github/Kronos-Integration/service-logger-gelf/badge.svg)](https://snyk.io/test/github/Kronos-Integration/service-logger-gelf)
