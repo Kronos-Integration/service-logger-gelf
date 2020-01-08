@@ -28,7 +28,8 @@
     "docs": "documentation readme src/gelf-logger-service.mjs --section=API",
     "lint": "documentation lint src/gelf-logger-service.mjs",
     "posttest": "markdown-doctest",
-    "test": "ava"
+    "test": "ava",
+    "prepare": "rollup -c"
   },
   "dependencies": {
     "@kronos-integration/service": "^8.3.14",
