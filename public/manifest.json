@@ -1,0 +1,10 @@
+{
+  "name": "@kronos-integration/service-logger-gelf",
+  "description": "forwards log entries to a GELF server",
+  "icons": [
+    {
+      "src": "facicon.ico",
+      "sizes": "16x16"
+    }
+  ]
+}
