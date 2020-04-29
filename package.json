@@ -7,7 +7,6 @@
   "sideEffects": false,
   "type": "module",
   "main": "src/gelf-logger-service.mjs",
-  "module": "src/gelf-logger-service.mjs",
   "description": "forwards log entries to a GELF server",
   "keywords": [
     "kronos-service"
