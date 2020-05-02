@@ -8,7 +8,7 @@
   "type": "module",
   "main": "src/gelf-logger-service.mjs",
   "exports": {
-    ".": "./src/gelf-logger-service.mjs",
+    ".": "src/gelf-logger-service.mjs",
     "./": "./"
   },
   "description": "forwards log entries to a GELF server",
