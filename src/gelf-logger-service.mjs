@@ -6,7 +6,7 @@ import Gelf from 'gelf';
 /**
  * Log receiving service
  */
-export default class GelfLoggerService extends ServiceLogger {
+export class GelfLoggerService extends ServiceLogger {
   /**
    * @return {string} 'gelf-logger'
    */
@@ -72,3 +72,5 @@ export default class GelfLoggerService extends ServiceLogger {
     };
   }
 }
+
+export default GelfLoggerService;

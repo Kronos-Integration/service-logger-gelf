@@ -6,9 +6,9 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "src/gelf-logger-service.mjs",
+  "main": "./src/gelf-logger-service.mjs",
   "exports": {
-    ".": "src/gelf-logger-service.mjs",
+    ".": "./src/gelf-logger-service.mjs",
     "./": "./"
   },
   "description": "forwards log entries to a GELF server",
@@ -29,11 +29,11 @@
   "scripts": {
     "test": "ava --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/gelf-logger-service.mjs --section=API",
-    "lint": "documentation lint src/gelf-logger-service.mjs"
+    "docs": "documentation readme ./src/gelf-logger-service.mjs --section=API",
+    "lint": "documentation lint ./src/gelf-logger-service.mjs"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.3.26",
+    "@kronos-integration/service": "^8.3.27",
     "gelf": "^2.0.1",
     "model-attributes": "^4.1.6"
   },
