@@ -56,8 +56,8 @@
   "homepage": "https://github.com/Kronos-Integration/service-logger-gelf#readme",
   "template": {
     "inheritFrom": [
-      "arlac77/template-kronos-module",
-      "arlac77/template-github"
+      "arlac77/template-github-action",
+      "arlac77/template-kronos-module"
     ]
   }
 }
