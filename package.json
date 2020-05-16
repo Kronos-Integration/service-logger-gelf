@@ -33,7 +33,7 @@
     "lint": "documentation lint ./src/gelf-logger-service.mjs"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.5.8",
+    "@kronos-integration/service": "^8.5.11",
     "gelf": "^2.0.1",
     "model-attributes": "^4.1.6"
   },
