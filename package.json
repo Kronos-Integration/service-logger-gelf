@@ -31,7 +31,7 @@
     "lint:docs": "documentation lint ./src/**/*.mjs"
   },
   "dependencies": {
-    "@kronos-integration/service": "^10.4.54",
+    "@kronos-integration/service": "^10.4.55",
     "gelf": "^2.0.1",
     "model-attributes": "^4.2.2"
   },
