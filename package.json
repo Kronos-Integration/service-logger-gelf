@@ -34,7 +34,7 @@
   "dependencies": {
     "@kronos-integration/service": "^11.2.5",
     "gelf": "^2.0.1",
-    "model-attributes": "^4.2.2"
+    "model-attributes": "^4.2.4"
   },
   "devDependencies": {
     "ava": "^6.1.3",
