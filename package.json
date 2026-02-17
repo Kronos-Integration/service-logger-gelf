@@ -35,7 +35,7 @@
   "dependencies": {
     "@kronos-integration/service": "^15.5.0",
     "gelf": "^2.0.1",
-    "pacc": "^9.2.3"
+    "pacc": "^9.2.4"
   },
   "devDependencies": {
     "ava": "^6.4.1",
